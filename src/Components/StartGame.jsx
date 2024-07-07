@@ -1,19 +1,21 @@
-import styled from "styled-components"
-function StartGame({toggleGamePlay}) {
+import styled from "styled-components";
+function StartGame({ toggleGamePlay }) {
   return (
     <Container>
-      <div><img src="/images/dices.png" /></div>
+      <div>
+        <img src="./images/dices.png" />
+      </div>
       <div className="content">
         <h1>DICE GAME</h1>
         <div>
-        <Button onClick={toggleGamePlay}>Play Now</Button>
+          <Button onClick={toggleGamePlay}>Play Now</Button>
         </div>
       </div>
     </Container>
-  )
+  );
 }
 
-export default StartGame
+export default StartGame;
 
 const Container = styled.div`
   max-width: 1180px;
@@ -22,11 +24,11 @@ const Container = styled.div`
   height: 100vh;
   align-items: center;
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
     align-items: end;
-    h1{
+    h1 {
       font-size: 96px;
       white-space: nowrap;
     }
@@ -39,18 +41,18 @@ const Container = styled.div`
     margin-top: 100px;
     gap: 100px;
 
-    img{
+    img {
       height: 260px;
       width: 325px;
     }
-    .content{
-      h1{
-      font-size: 48px;
-      white-space: nowrap;
-    }
+    .content {
+      h1 {
+        font-size: 48px;
+        white-space: nowrap;
+      }
     }
   }
-`
+`;
 const Button = styled.button`
   color: white;
   padding: 10px 18px;
@@ -62,7 +64,7 @@ const Button = styled.button`
   transition: 0.4s background ease-in;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: white;
     border: 1px solid black;
     color: black;
@@ -72,4 +74,4 @@ const Button = styled.button`
   @media (min-width: 650px) {
     width: 110px;
   }
-`
+`;
